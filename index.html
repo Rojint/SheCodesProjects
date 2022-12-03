@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <title>Toy Store</title>
+    <style>
+      * {
+        font-family: "Nunito", sans-serif;
+        background: linear-gradient(
+          108.1deg,
+          rgb(167, 220, 225) 11.2%,
+          rgb(217, 239, 242) 88.9%
+        );
+      }
+
+      h1 {
+        color: #041b52;
+        text-align: center;
+        margin: 20px 0;
+        background: none;
+      }
+      h2 {
+        color: #041b52;
+        text-align: center;
+        margin: 20px 0;
+        background: none;
+      }
+
+      .img-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      img {
+        width: 250px;
+        height: 250px;
+        margin-right: 30px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 16px 24px;
+        border-radius: 18px;
+        line-height: 10px;
+        color: #041b52;
+        border: 2px solid #041b52;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: #0b2d7c;
+        color: white;
+      }
+
+      hr {
+        margin: 0 auto;
+        opacity: 0.5;
+        width: 80%;
+        background: none;
+      }
+
+      h3 {
+        margin: 20px 0 20px;
+        color: #041b52;
+      }
+
+      .text {
+        color: #041b52;
+        font-size: 22px;
+        line-height: 1.5;
+        font-weight: 200;
+        margin: 20px 0 20px;
+        margin-left: 80px;
+      }
+
+      a {
+        text-decoration: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      em {
+        background: none;
+      }
+
+      .footer {
+        margin-top: 70px;
+        height: 20%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      p {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Toy Magic</h1>
+    <h2>FIFA World Cup Quatar 2022 toys</h2>
+    <div class="img-container">
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/957/original/pink.jpg?1669917192"
+        alt="pig"
+        target="_blank"
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/943/original/toys.jpg?1669905511"
+        alt="toys"
+        target="_blank
+        "
+      />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/946/original/caat.jpg?1669910249"
+        alt="cat"
+        target="_blank"
+      />
+    </div>
+    <button>Order now!</button>
+
+    <hr />
+    <div class="text">
+      <h3>How to order customized toys?</h3>
+      <p>
+        The 22nd <em>FIFA World Cup</em>, has started and you can order your
+        toys now!<br />
+        Our collectible <strong>FIFA World Cup Quatar 2022 </strong>toys are
+        available for all teams. <br />
+        You can choose your favourite team and customize toys with their kit.
+        <br />
+        <a href="#">Contact us</a> and talk with a member of our sales team! We
+        'll be happy to answer any question!
+      </p>
+    </div>
+
+    <p class="footer">Coded by Rozhin 👩‍💻</p>
+  </body>
+  <script>
+    function order() {
+      let name = prompt("Please enter your name");
+      let email = prompt("please enter your email");
+      let team = prompt("what is your favorite team?");
+      if (name.length !== null && team.length !== null) {
+        alert(
+          `Hello ${name}! we'll be in touch by your email, hope your team (${team}) wins🏆 `
+        );
+      }
+    }
+    let orderButton = document.querySelector("button");
+    orderButton.addEventListener("click", order);
+  </script>
+</html>
